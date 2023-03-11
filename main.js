@@ -12,7 +12,7 @@ let userFirstName,
 
 function UserFirstName() {
     userFirstName = prompt('Введите Ваше имя : ');
-    userFirst = userFirstName.replace(/[^a-zа-я]+/g);
+    userFirst = userFirstName.replace(/[^a-zа-я][\d]+/g, '');
     while (
         userFirstName == null ||
         userFirstName == '' ||
@@ -23,14 +23,14 @@ function UserFirstName() {
 }
 function UserLastName() {
     userLastName = prompt('Введите Вашу фамилию:');
-    userLast = userLastName.replace(/[^a-zа-я]+/g);
+    userLast = userLastName.replace(/[^a-zа-я]+/g, '');
     while (userLastName == null || userLastName == '' || !isNaN(userLastName)) {
         UserLastName();
     }
 }
 function UserSecondName() {
     userSecondName = prompt('Введите Ваше отчество: ');
-    userSecond = userSecondName.replace(/[^a-zа-я]+/g);
+    userSecond = userSecondName.replace(/[^a-zа-я]+/g, '');
     while (
         userSecondName == null ||
         userSecondName == '' ||
@@ -44,7 +44,7 @@ function UserSecondName() {
 function UserAge() {
     userAge = prompt('Введите ваш Возраст :');
     userAg = !parseInt(userAge);
-    userAge = userAge.replace(/[^0-9]/g, "");
+    userAge = userAge.replace(/[^0-9]/g, '');
     while (!NaN === userAg) {
         UserAge();
     }
