@@ -1,55 +1,61 @@
 let userFirstName,
+    userFirst,
     userLastName,
+    userLast,
     userSecondName,
+    userSecond,
     userAge,
+    userAg,
     userGat,
-    userp,
+    userP,
     userResult;
+
 function UserFirstName() {
     userFirstName = prompt('Введите Ваше имя : ');
+    userFirst = userFirstName.replace(/[^a-zа-я]+/g);
     while (
         userFirstName == null ||
         userFirstName == '' ||
         !isNaN(userFirstName)
     ) {
-        userFirstName = prompt('Пожалуйста, введите ваше ИМЯ:');
+        UserFirstName();
     }
 }
 function UserLastName() {
     userLastName = prompt('Введите Вашу фамилию:');
+    userLast = userLastName.replace(/[^a-zа-я]+/g);
     while (userLastName == null || userLastName == '' || !isNaN(userLastName)) {
-        userLastName = prompt('Введите вашу ФАМИЛИЮ:');
+        UserLastName();
     }
 }
 function UserSecondName() {
     userSecondName = prompt('Введите Ваше отчество: ');
+    userSecond = userSecondName.replace(/[^a-zа-я]+/g);
     while (
         userSecondName == null ||
         userSecondName == '' ||
         !isNaN(userSecondName)
     ) {
-        userSecondName = prompt('Введите ваше ОТЧЕСТВО: ');
+        UserSecondName();
     }
 }
 
 
 function UserAge() {
-    userAge = +prompt('Введите ваш Возраст :');
-
-    while (
-        userAge == null ||
-        userAge == undefined ||
-        userAge == '' ||
-        isNaN(userAge)
-    ) {
-        userAge = +prompt('Введите ваш Возраст!:');
+    userAge = prompt('Введите ваш Возраст :');
+    userAg = !parseInt(userAge);
+    userAge = userAge.replace(/[^0-9]/g, "");
+    while (!NaN === userAg) {
+        UserAge();
     }
 }
 
+
 function UserGender() {
-    userGat = confirm('Ваш пол мужской?');
+    userGat = confirm(`Ваш пол мужской?
+     ОК = ДА ,a отмена = НЕТ`);
     userGat ? userP = 63 : userP = 58;
-    userAge > userP ? userResult = 'Да' : userResult = 'нет';
+    userResult = (userAge > userP) ? 'Да' : 'нет';
 }
 
 
@@ -60,9 +66,10 @@ UserSecondName();
 UserAge();
 UserGender();
 
-let newUserFirstName = userFirstName[0].toUpperCase() + userFirstName.slice(1);
-let newUserLastName = userLastName[0].toUpperCase() + userLastName.slice(1);
-let newUserSecondName = userSecondName[0].toUpperCase() + userSecondName.slice(1);
+
+let newUserFirstName = userFirst[0].toUpperCase() + userFirst.slice(1);
+let newUserLastName = userLast[0].toUpperCase() + userLast.slice(1);
+let newUserSecondName = userSecond[0].toUpperCase() + userSecond.slice(1);
 
 alert(` ФИО: ${newUserFirstName} ${newUserLastName} ${newUserSecondName} 
 возраст, лет: ${userAge}
