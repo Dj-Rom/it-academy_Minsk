@@ -50,7 +50,6 @@ function UserAge() {
     }
 }
 
-
 function UserGender() {
     userGat = confirm(`Ваш пол мужской?
      ОК = ДА ,a отмена = НЕТ`);
