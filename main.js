@@ -12,7 +12,7 @@ let userFirstName,
 
 function UserFirstName() {
     userFirstName = prompt('Введите Ваше имя : ');
-    userFirst = userFirstName.replace(/[^a-zа-я][\d]+/g, '');
+    userFirst = userFirstName.replace(/[^a-zа-я]+/g, '');
     while (
         userFirstName == null ||
         userFirstName == '' ||
