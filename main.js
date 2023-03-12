@@ -62,7 +62,7 @@ function replaceUser(){
     
     userLast = userLastName.replace(/[^a-zа-яA-ZА-Я]+/g, ''),
     
-    userSecond = userSecondName.replace(/[^a-zа-яA-ZА-Я]+/g, '')
+    userSecond = userSecondName.replace(/[^a-zа-яA-ZА-Я]+/g, ''),
     
     userAge = userAge.replace(/[^0-9]/g, ''); 
     }
