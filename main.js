@@ -43,9 +43,8 @@ function UserSecondName() {
 
 function UserAge() {
     userAge = prompt('Введите ваш Возраст :');
-    userAg = !parseInt(userAge);
-    userAge = userAge.replace(/[^0-9]/g, '');
-    while (!NaN === userAg) {
+    userAg = userAge.replace(/[^0-9]/g, '');
+    while (!NaN === userAge) {
         UserAge();
     }
 }
@@ -71,7 +70,7 @@ let newUserLastName = userLast[0].toUpperCase() + userLast.slice(1);
 let newUserSecondName = userSecond[0].toUpperCase() + userSecond.slice(1);
 
 alert(` ФИО: ${newUserFirstName} ${newUserLastName} ${newUserSecondName} 
-возраст, лет: ${userAge}
-возраст, дней: ${userAge * 365}
+возраст, лет: ${userAg}
+возраст, дней: ${userAg * 365}
 ваш пол: ${userGat ? 'мужской' : 'женский'}
 пенсионный возраст: ${userResult}`);
