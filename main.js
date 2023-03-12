@@ -48,7 +48,7 @@ function UserGender() {
     userGat = confirm(`Ваш пол мужской?
      ОК = ДА ,a отмена = НЕТ`);
     userGat ? userP = 63 : userP = 58;
-    userResult = (userAge > userP) ? 'Да' : 'нет';
+    userResult = (userAge >= userP) ? 'Да' : 'нет';
 }
 
 function replaceUser(){ 
