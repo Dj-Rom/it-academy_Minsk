@@ -56,6 +56,7 @@ function UserGender() {
     userGat ? userP = 63 : userP = 58;
     userResult = (userAge > userP) ? 'Да' : 'нет';
 }
+
 function replaceUser(){ 
     userFirst = userFirstName.replace(/[^a-zа-яA-ZА-Я]+/g, ''),
     
