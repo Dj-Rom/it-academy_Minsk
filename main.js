@@ -12,7 +12,7 @@ let userFirstName,
 
 function UserFirstName() {
     userFirstName = prompt('Введите Ваше имя : ');
-    userFirst = userFirstName.replace(/[^a-zа-яA-ZА-Я]+/g, '');
+    
     while (
         userFirstName == null ||
         userFirstName == '' ||
@@ -23,14 +23,14 @@ function UserFirstName() {
 }
 function UserLastName() {
     userLastName = prompt('Введите Вашу фамилию:');
-    userLast = userLastName.replace(/[^a-zа-яA-ZА-Я]]+/g, '');
+    
     while (userLastName == null || userLastName == '' || !isNaN(userLastName)) {
         UserLastName();
     }
 }
 function UserSecondName() {
     userSecondName = prompt('Введите Ваше отчество: ');
-    userSecond = userSecondName.replace(/[^a-zа-яA-ZА-Я]]+/g, '');
+    
     while (
         userSecondName == null ||
         userSecondName == '' ||
@@ -44,8 +44,8 @@ function UserSecondName() {
 function UserAge() {
     userAge = prompt('Введите ваш Возраст :');
     userAg = !parseInt(userAge);
-    userAge = userAge.replace(/[^0-9]/g, '');
-    while (!NaN === userAg) {
+    
+    while (!NaN === userAg || userAg === null) {
         UserAge();
     }
 }
@@ -56,7 +56,15 @@ function UserGender() {
     userGat ? userP = 63 : userP = 58;
     userResult = (userAge > userP) ? 'Да' : 'нет';
 }
-
+function replaceUser(){ 
+    userFirst = userFirstName.replace(/[^a-zа-яA-ZА-Я]+/g, ''),
+    
+    userLast = userLastName.replace(/[^a-zа-яA-ZА-Я]+/g, ''),
+    
+    userSecond = userSecondName.replace(/[^a-zа-яA-ZА-Я]+/g, '')
+    
+    userAge = userAge.replace(/[^0-9]/g, ''); 
+    }
 
 
 UserFirstName();
@@ -64,6 +72,7 @@ UserLastName();
 UserSecondName();
 UserAge();
 UserGender();
+replaceUser()
 
 
 let newUserFirstName = userFirst[0].toUpperCase() + userFirst.toLowerCase(1).slice(1); 
