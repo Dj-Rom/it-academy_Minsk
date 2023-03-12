@@ -13,10 +13,7 @@ let userFirstName,
 function UserFirstName() {
     userFirstName = prompt('Введите Ваше имя : ');
     
-    while (
-        userFirstName == null ||
-        userFirstName == '' ||
-        !isNaN(userFirstName)
+    while (!userFirstName || !isNaN(userFirstName)
     ) {
         UserFirstName();
     }
@@ -24,18 +21,15 @@ function UserFirstName() {
 function UserLastName() {
     userLastName = prompt('Введите Вашу фамилию:');
     
-    while (userLastName == null || userLastName == '' || !isNaN(userLastName)) {
+    while (!userLastName || !isNaN(userLastName)
+    ) {
         UserLastName();
     }
 }
 function UserSecondName() {
     userSecondName = prompt('Введите Ваше отчество: ');
     
-    while (
-        userSecondName == null ||
-        userSecondName == '' ||
-        !isNaN(userSecondName)
-    ) {
+    while (!userSecondName || !isNaN(userSecondName)) {
         UserSecondName();
     }
 }
@@ -43,9 +37,9 @@ function UserSecondName() {
 
 function UserAge() {
     userAge = prompt('Введите ваш Возраст :');
-    userAg = !parseInt(userAge);
+    userAg = parseInt(userAge);
     
-    while (!NaN === userAg || userAg === null) {
+    while (isNaN(userAg)) {
         UserAge();
     }
 }
