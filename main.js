@@ -12,7 +12,7 @@ let userFirstName,
 
 function UserFirstName() {
     userFirstName = prompt('Введите Ваше имя : ');
-    userFirst = userFirstName.replace(/[^a-zа-я]+/g, '');
+    userFirst = userFirstName.replace(/[^a-zа-яА-ЯA-Z]+/g, '');
     while (
         userFirstName == null ||
         userFirstName == '' ||
@@ -23,14 +23,14 @@ function UserFirstName() {
 }
 function UserLastName() {
     userLastName = prompt('Введите Вашу фамилию:');
-    userLast = userLastName.replace(/[^a-zа-я]+/g, '');
+    userLast = userLastName.replace(/[^a-zа-яА-ЯA-Z]+/g, '');
     while (userLastName == null || userLastName == '' || !isNaN(userLastName)) {
         UserLastName();
     }
 }
 function UserSecondName() {
     userSecondName = prompt('Введите Ваше отчество: ');
-    userSecond = userSecondName.replace(/[^a-zа-я]+/g, '');
+    userSecond = userSecondName.replace(/[^a-zа-яА-ЯA-Z]+/g, '');
     while (
         userSecondName == null ||
         userSecondName == '' ||
