@@ -48,7 +48,7 @@ let userFirstName,
         userGat = confirm(`Ваш пол мужской?
          ОК = ДА ,a отмена = НЕТ`);
         userP = (userGat)? 63 : 58;
-        userResult = (userAge >= userP) ? 'Да' : 'нет';
+        userResult = (userAg >= userP) ? 'Да' : 'нет';
     }
     
     function replaceUser(){ 
@@ -74,7 +74,7 @@ let userFirstName,
     let newUserLastName = userLast[0].toUpperCase() + userLast.toLowerCase(1).slice(1);
     let newUserSecondName = userSecond[0].toUpperCase() + userSecond.toLowerCase(1).slice(1);
     
-    alert(` ФИО: ${newUserFirstName} ${newUserLastName} ${newUserSecondName} 
+    alert(`    ФИО: ${newUserFirstName} ${newUserLastName} ${newUserSecondName} 
     возраст, лет: ${userAge}
     возраст, дней: ${userAge * 365}
     через 5 лет вам будет: ${+userAge + 5}
