@@ -36,12 +36,12 @@ function replaceEnterUser(){
 replaceEnterUser();
     
 let newUserFirstName = userFirst[0].toUpperCase() + userFirst.toLowerCase(1).slice(1),
-   newUserLastName = userLast[0].toUpperCase() + userLast.toLowerCase(1).slice(1),
-   newUserSecondName = userSecond[0].toUpperCase() + userSecond.toLowerCase(1).slice(1);
+    newUserLastName = userLast[0].toUpperCase() + userLast.toLowerCase(1).slice(1),
+    newUserSecondName = userSecond[0].toUpperCase() + userSecond.toLowerCase(1).slice(1);
     
 alert(`ФИО: ${newUserFirstName} ${newUserLastName} ${newUserSecondName} 
-возраст, лет: ${userAg}
-возраст, дней: ${userAg * 365}
-через 5 лет вам будет: ${userAg + 5}
-ваш пол: ${userGat ? 'мужской' : 'женский'}
-пенсионный возраст: ${userResult}`);
+      возраст, лет: ${userAg}
+      возраст, дней: ${userAg * 365}
+      через 5 лет вам будет: ${userAg + 5}
+      ваш пол: ${userGat ? 'мужской' : 'женский'}
+      пенсионный возраст: ${userResult}`);
