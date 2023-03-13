@@ -47,7 +47,7 @@ function UserAge() {
 function UserGender() {
     userGat = confirm(`Ваш пол мужской?
      ОК = ДА ,a отмена = НЕТ`);
-    userGat ? userP = 63 : userP = 58;
+    userP = (userGat)? 63 : 58;
     userResult = (userAge >= userP) ? 'Да' : 'нет';
 }
 
@@ -77,5 +77,6 @@ let newUserSecondName = userSecond[0].toUpperCase() + userSecond.toLowerCase(1).
 alert(` ФИО: ${newUserFirstName} ${newUserLastName} ${newUserSecondName} 
 возраст, лет: ${userAge}
 возраст, дней: ${userAge * 365}
+через 5 лет вам будет: ${userAge + 5}
 ваш пол: ${userGat ? 'мужской' : 'женский'}
 пенсионный возраст: ${userResult}`);
