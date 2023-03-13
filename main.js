@@ -67,7 +67,7 @@ let userFirstName,
     UserSecondName();
     UserAge();
     UserGender();
-    replaceUser()
+    replaceUser();
     
     
     let newUserFirstName = userFirst[0].toUpperCase() + userFirst.toLowerCase(1).slice(1); 
