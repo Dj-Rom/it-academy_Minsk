@@ -79,4 +79,4 @@ let userFirstName,
     возраст, дней: ${userAge * 365}
     через 5 лет вам будет: ${+userAge + 5}
     ваш пол: ${userGat ? 'мужской' : 'женский'}
-    пенсионный возраст: ${userResult}`);</script>
+    пенсионный возраст: ${userResult}`);
